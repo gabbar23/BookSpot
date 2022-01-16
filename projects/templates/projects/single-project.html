@@ -1,0 +1,60 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<!-- Main Section -->
+<main class="singleProject my-md">
+    <div class="container">
+        <div class="layout">
+            <div class="column column--1of3">
+                <h3 class="singleProject__subtitle">Tags</h3>
+                <div class="singleProject__toolStack">
+                    {% for tag in project.tags.all %}
+                    <span class="tag tag--pill tag--sub tag--lg">
+                        <small>{{tag}}</small>
+                    </span>
+                    {% endfor %}
+
+                </div>
+
+                        <a href="{% url 'create-message' project.owner.id %}" class="btn btn--sub btn--lg">Send Message </a>
+
+
+            </div>
+
+            <div class="column column--2of3">
+                <img class="singleProject__preview" src="{{ project.imageURL }}" alt="portfolio thumbnail" />
+                <p
+                    class="singleProject__developer">by {{project.owner.name}}</p>
+                    <br>
+                <h2 class="singleProject__title">{{project.title}}</h2>
+                <h3 class="singleProject__subtitle">Publisher</h3>
+                <div class="singleProject__info">
+                    {{project.description}}
+                </div>
+                <h3 class="singleProject__subtitle" style="padding-top:23px">Pages</h3>
+                <div class="singleProject__info" >
+                    {{project.demo_link}} 
+                </div>
+                <h3 class="singleProject__subtitle" style="padding-top:23px">Binding</h3>
+                <div class="singleProject__info">
+                    
+                    {{project.gender }}
+                </div>
+                <h3 class="singleProject__subtitle" style="padding-top:23px">Language</h3>
+                <div class="singleProject__info">
+                    
+                    <h6 class="singleProject__info" >{{project.source_link}}</h6>
+                </div>
+                <h3 class="singleProject__subtitle" style="padding-top:23px">Location</h3>
+                <div class="singleProject__info">
+                    {{project.location}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+
+{% endblock %}

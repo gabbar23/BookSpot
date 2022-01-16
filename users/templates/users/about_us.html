@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="ABOUT US">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>About Us</title>
+     <!-- bootstrap CDN Stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'styles/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'styles/Home.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'styles/styles_front.css' %}" >
+<link rel="stylesheet" href="{% static 'styles/app.css' %}" >
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu&display=swap" rel="stylesheet">
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-efcb"><div class="nav-blue"><div class="u-clearfix u-sheet u-sheet-1">
+        
+        <div class="container-fluid "style="padding-bottom: 0;">
+
+          <!-- Nav Bar -->
+          <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="padding-bottom: 0%";>
+      
+            <a class="u-custom-font u-text u-text-default u-text-1" href="{% url 'landing_page'%}" style="font-family: 'Ubuntu';
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;">Bookspot</a>
+      
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      
+                <ul class="navbar-nav ml-auto">
+                  {% if request.user.is_authenticated %}
+                  <li class="nav-item">
+                <a class="nav-link" href="{% url 'projects' %}">Find Books</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'account' %}">Account</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'inbox' %}">Inbox</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Log In/Sign Up</a>
+              </li>
+                {% endif %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
+                </li>
+            </ul>
+      
+              </div>
+            </nav>
+      
+        </div>
+      </div></header>
+    <section style="background: url('{% static 'images/2e444d68bfde401e77ef0af8250744586c5fe59f9a3bfbc9b7aab7f78af6f5fb1457f1029991dc482726d023dfcf768ec527acb1fd57114289ebf8_1280.jpg' %}')" class="u-clearfix u-image u-section-1" id="carousel_1c6d" data-image-width="1280" data-image-height="851">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-grey-5 u-layout-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-bottom u-container-layout-1">
+                  <img class="u-image u-image-default u-image-1" src="{% static 'images/IMG_2852.jpg' %}" alt="" data-image-width="3007" data-image-height="3540">
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-grey-5 u-layout-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <h1 class="u-text u-text-grey-50 u-text-1">ABOUT US</h1>
+                  <p class="u-text u-text-grey-50 u-text-2">Bookspot is an online bookstore with a mission to support users exchange and find their books with ease.<br>We believe that bookstores are essential to a healthy culture. We believes in the reincarnation of the books.
+                    We believe in making them immortal and make them live forever.
+                    The books which were going to be wasted in someone's house have been reused and given a new life. The life span of books is increased when we provide them to our Readers again. We save trees by saving books from getting wasted <br>
+                    <br>Thanks for being part of our community.<br> <a href="https://www.linkedin.com/in/mukul-sharma-988b4a218/?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADb8kPgBtT-Rk64FCdb5G9fvQBVQ3Yd6P88" target="_blank">Mukul Sharma </a> &amp;<a href="https://www.linkedin.com/in/amanjot-singh-iwnl/" target="_blank"> Amanjot Singh </a>
+                  </p>
+                  <div class="u-social-icons u-spacing-30 u-social-icons-1">
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-fd7c"><div class="u-align-left u-clearfix u-sheet u-sheet-1"></div></footer>
+  </body>
+</html>
